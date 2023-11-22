@@ -20,17 +20,18 @@ while weight_is_fine is False:
         print("Enter a valid weight unit")
         weight_unit = input("Enter L (lb) or K (kg)").strip()
         quit_process(weight_unit)
+    # test the validity of the weight unit
     if weight_unit.upper() == "L" or weight_unit.upper() == "K":
         if weight_unit.upper() == "L":
             factor = lb_to_kg_factor
-            final_unit = "Kilos"
+            final_unit = "kilos"
         else:
             factor = kg_to_lb_factor 
-            final_unit = "Pounds"
+            final_unit = "pounds"
         try:
             weight_entered = float(weight)
             weight_is_fine = True
-            weight_converted = weight_entered * factor
+            weight_converted = round(weight_entered * factor, 2)
             print(f"Weight : {weight_converted} {final_unit}")
         except:
             print("Check your weight")
