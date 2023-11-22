@@ -5,7 +5,7 @@ while weight_is_fine is False:
     while weight_unit.upper() != "L" and weight_unit.upper() != "K":
         print("Enter a valid weight unit")
         weight_unit = input("Enter L (lbs) or K (kgs)").strip()
-    if weight.upper() = "QUIT" or weight_unit.upper() ="QUIT":
+    if weight.upper() == "QUIT" or weight_unit.upper() == "QUIT":
             quit()
     elif weight_unit.upper() == "L":
         try:
@@ -22,4 +22,4 @@ while weight_is_fine is False:
             weight_pounds = weight_kilograms * 2.2046226218
             print(f"Weight : {weight_pounds} lbs")
         except:
-            print("Check your weight or quit to exit")
+            print("Check your weight")
