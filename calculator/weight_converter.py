@@ -6,10 +6,10 @@ while weight_is_fine is False:
     quit_process(weight_unit)
     
     while weight_unit.upper() != "L" and weight_unit.upper() != "K":
-        print("Enter a valid weight unit or quit to exit")
+        print("Enter a valid weight unit or quit to")
         weight_unit = input("Enter L (lbs) or K (kgs)").strip()
         quit_process(weight_unit)
-    elif weight_unit.upper() == "L":
+    if weight_unit.upper() == "L":
         try:
             weight_pounds = float(weight)
             weight_is_fine = True
@@ -27,6 +27,6 @@ while weight_is_fine is False:
             print("Check your weight")
 # Quit process if quit action typed           
 def quit_process(action):
-    if action.upper == "QUIT":
+    if action.upper() == "QUIT":
         print(Bye bye)
         quit()
