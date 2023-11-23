@@ -27,7 +27,11 @@ except:
             break
         index = main_text.find(lookup_characters, index) + len(lookup_characters)
         count += 1
-    print(f"'{lookup_characters}' is {count} times referenced in\n{main_text}")
+    if count > 1:
+        count_plural_mark ="s"
+    else:
+        count_plural_mark = ""
+    print(f"'{lookup_characters}' is {count} time{count_plural_mark} referenced in\n{main_text}")
     
 # For loop processing, line by line
 if filename_Is_Fine:
@@ -36,4 +40,8 @@ if filename_Is_Fine:
         if lookup_characters not in line:
             continue 
         count +=1
-    print(f"'{lookup_characters}' is {count} times referenced")
+    if count > 1:
+            count_plural_mark ="s"
+    else:
+        count_plural_mark = ""
+    print(f"'{lookup_characters}' is {count} time{count_plural_mark} referenced")
