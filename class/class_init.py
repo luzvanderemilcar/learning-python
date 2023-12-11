@@ -1,4 +1,10 @@
-class Human:
+class Male:
+    def __init__(self):
+        self.gender = "male"
+        self.subject_pronoun = "she"
+        
+
+class Human(Male):
     def __init__(self, name, age, gender, human_id):
         self.id = human_id
         self.name = name
@@ -14,6 +20,7 @@ class Human:
       
     def introduce(self):
         print(f"My name is {self.name}. I'm {self.age} years old")
+
 
 luzvander = Human("Luzvander EMILCAR", 27, "male", 23)
 # calling method on object
